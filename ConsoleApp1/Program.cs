@@ -42,7 +42,7 @@ namespace ConsoleApp
             public static void Main(string[] args)
             {
                 string src = "ИЛЛЮЗИИ, ЧЕМ БОЛЬШЕ О НИХ ДУМАЕШЬ, ИМЕЮТ СВОЙСТВО МНОЖИТЬСЯ, ПРИОБРЕТАТЬ БОЛЕЕ ВЫРАЖЕННУЮ ФОРМУ";
-                Crypter crypter = new(11, "мысленно");
+                Crypter crypter = new(10, "мысленно");
                 string crypted = crypter.Encode(src);
                 Console.WriteLine($"Зашифрованный текст: {crypted}");
                 string encrypted = crypter.Decode(crypted);
