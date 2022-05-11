@@ -21,21 +21,22 @@ namespace ConsoleApp
         public string Encode(string src)
         {
             char[] res = new char[src.Length];
-            for (int i = 0; i < height; i++)
-                for (int j = 0; j < width; j++)
+            for (int i = 0; i < height - 1; ++i)
+                for (int j = 0; j < width; ++j)
                     res[i * width + j] = src[permutation[j] * height + i];
             return new string(res);
 
         }
-        public string Decode(string src)
+        /*public string Decode(string src)
         {
             char[] res = new char[src.Length];
-            for (int i = 0; i < width; i++)
-                for (int j = 0; j < height; j++)
+            for (int i = 0; i < width - 1; ++i)
+                for (int j = 0; j < height - 1; ++j)
                     res[permutation[i] * height + j] = src[j * width + i];
             return new string(res);
-        }
-    
+        }*/
+
+
 
         class MainClass
         {
@@ -45,8 +46,8 @@ namespace ConsoleApp
                 Crypter crypter = new(12, "мысленно");
                 string crypted = crypter.Encode(src);
                 Console.WriteLine($"Зашифрованный текст: {crypted}");
-                string encrypted = crypter.Decode(crypted);
-                 Console.WriteLine($"Расшифрованный текс: {encrypted}");
+                /*string encrypted = crypter.Decode(crypted);
+                Console.WriteLine($"Расшифрованный текс: {encrypted}");*/
             }
         }
     }
