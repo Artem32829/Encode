@@ -2,11 +2,7 @@
 
 namespace ConsoleApp
 {
-    class Crypter
-    {
-        int width;
-        int height;
-        int[] permutation;
+    class Crypterцуцуыфвпывпцупывпфыв
 
         public Crypter(int height, string keyword)
         {
